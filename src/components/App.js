@@ -7,7 +7,7 @@ function App() {
   const [movies, setMovies] = useState([
     { id: 1, title: "A River Runs Through It" },
     { id: 2, title: "Se7en" },
-    { id: 3, title: "Inception" }
+    { id: 3, title: "Inception" },
   ]);
 
   return (
@@ -15,7 +15,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/movies">
-          <MoviesPage movies={movies} />
+          <MoviesPage movies={movies} setMovies={setMovies} />
         </Route>
         <Route exact path="/">
           <div>Home</div>
